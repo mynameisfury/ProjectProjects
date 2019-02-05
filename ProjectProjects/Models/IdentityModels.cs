@@ -29,5 +29,11 @@ namespace ProjectProjects.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<ProjectProjects.Models.Project> Projects { get; set; }
+        public System.Data.Entity.DbSet<ProjectProjects.Models.ProjectType> ProjectTypes { get; set; }
+
+
+
     }
 }

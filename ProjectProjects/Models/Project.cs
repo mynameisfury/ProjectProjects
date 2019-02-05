@@ -14,12 +14,12 @@ namespace ProjectProjects.Models
         public string ProjectName { get; set; }
         public string ProjectDescription { get; set; }
         [ForeignKey("ProjectTypeID")]
-        public ProjectType Type { get; set; }
+        public virtual ProjectType Type { get; set; }
         public string UserStory { get; set; }
 
         public DateTime Deadline { get; set; }
         [ForeignKey("UserID")]
-        public User User { get; set; }
+        public virtual User User { get; set; }
 
 
 
