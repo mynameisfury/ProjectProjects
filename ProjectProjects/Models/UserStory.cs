@@ -10,10 +10,13 @@ namespace ProjectProjects.Models
     public class UserStory
     {
         [Key]
-        public int ID { get; set; }
+        public int UserStoryID { get; set; }
         public string StoryName { get; set; }
         public string StoryText { get; set; }
-        [ForeignKey("ProjectID")]
+
         public int ProjectID { get; set; }
+        [ForeignKey("ProjectID")]
+        [Required]
+        public virtual Project Project { get; set; }
     }
 }
